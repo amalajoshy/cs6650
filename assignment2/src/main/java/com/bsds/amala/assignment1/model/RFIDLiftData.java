@@ -17,7 +17,6 @@ import java.io.Serializable;
  *
  * Simple class to wrap the data in a RFID lift pass reader record
  */
-@DynamoDBTable(tableName="RFIDLiftDataTable")
 public class RFIDLiftData implements Serializable, Comparable<RFIDLiftData>  {
     private static final Gson GSON = new Gson();
 
@@ -27,10 +26,6 @@ public class RFIDLiftData implements Serializable, Comparable<RFIDLiftData>  {
     private int liftId;
     private int time;
 
-    public RFIDLiftData() {
-
-    }
-
     public RFIDLiftData(int resortId, int dayNum, int skierID, int liftId, int time) {
         this.resortId = resortId;
         this.dayNum = dayNum;
@@ -39,7 +34,6 @@ public class RFIDLiftData implements Serializable, Comparable<RFIDLiftData>  {
         this.time = time;
     }
 
-    @DynamoDBAttribute(attributeName="resortId")
     public int getResortId() {
         return resortId;
     }
@@ -48,7 +42,6 @@ public class RFIDLiftData implements Serializable, Comparable<RFIDLiftData>  {
         this.resortId = resortId;
     }
 
-    @DynamoDBAttribute(attributeName="dayNum")
     public int getDayNum() {
         return dayNum;
     }
@@ -57,7 +50,6 @@ public class RFIDLiftData implements Serializable, Comparable<RFIDLiftData>  {
         this.dayNum = dayNum;
     }
 
-    @DynamoDBHashKey(attributeName="skierId")
     public int getSkierID() {
         return skierId;
     }
@@ -66,7 +58,6 @@ public class RFIDLiftData implements Serializable, Comparable<RFIDLiftData>  {
         this.skierId = skierID;
     }
 
-    @DynamoDBAttribute(attributeName="liftId")
     public int getLiftId() {
         return liftId;
     }
@@ -75,7 +66,6 @@ public class RFIDLiftData implements Serializable, Comparable<RFIDLiftData>  {
         this.liftId = liftId;
     }
 
-    @DynamoDBRangeKey(attributeName="time")
     public int getTime() {
         return time;
     }

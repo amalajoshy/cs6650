@@ -31,8 +31,8 @@ public class DatabaseConnectionPool {
         poolProperties.setDefaultAutoCommit(true);
         poolProperties.setValidationInterval(30000);
         poolProperties.setTimeBetweenEvictionRunsMillis(30000);
-        poolProperties.setMaxActive(32);
-        poolProperties.setInitialSize(32);
+        poolProperties.setMaxActive(60);
+        poolProperties.setInitialSize(60);
         poolProperties.setMaxWait(10000);
         poolProperties.setRemoveAbandonedTimeout(60);
         poolProperties.setMinEvictableIdleTimeMillis(30000);

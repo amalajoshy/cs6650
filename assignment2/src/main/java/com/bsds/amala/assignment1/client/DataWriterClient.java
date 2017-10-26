@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 public class DataWriterClient {
 
     @Option(name = "-t", usage = "no of threads")
-    private int numberOfThreads = 100;
+    private int numberOfThreads = 150;
 
     @Option(name = "-i", aliases = {"--ip"}, usage = "ip address", required = false)
     private String ipAddress;
