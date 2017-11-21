@@ -1,0 +1,16 @@
+package com.bsds.amala.assignment1.server.metrics;
+
+public enum Metric {
+    GET_STATS_ERRORS,
+    GET_STATS_LATENCY,
+
+    LOAD_LIFT_RECORD_ERRORS,
+    LOAD_LIFT_RECORD_LATENCY,
+
+    GET_STATS_DB_ERRORS,
+    GET_STATS_DB_LATENCY,
+
+    LOAD_LIFT_RECORD_DB_ERRORS,
+    LOAD_LIFT_RECORD_DB_LATENCY
+
+}
